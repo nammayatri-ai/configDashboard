@@ -49,6 +49,11 @@ else
     else
         echo "✅ Remote repository already configured"
     fi
+    
+    # Pull latest changes from main branch
+    echo "📥 Pulling latest changes from main branch..."
+    git fetch origin
+    git pull origin main
 fi
 
 # Create .gitignore if it doesn't exist
