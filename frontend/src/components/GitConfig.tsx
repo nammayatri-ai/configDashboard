@@ -122,7 +122,7 @@ const GitConfig = ({ onLogout }: GitConfigProps) => {
   const handleReset = () => {
     setGitConfig({
       repository: {
-        url: 'git@github.com:nammayatri/configDashboard.git',
+        url: 'git@github.com:nammayatri-ai/configDashboard.git',
         branch: 'main',
         remote: 'origin'
       },

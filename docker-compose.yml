@@ -26,10 +26,11 @@ services:
       - "8090:8090"
     volumes:
       - ./backend:/app
+      - /app/node_modules
       - ./backend/configs:/app/configs
       - ~/.ssh:/root/.ssh:ro
     env_file:
-      - .env.server
+      - .env
     environment:
       - PORT=8090
       - NODE_ENV=production

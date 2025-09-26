@@ -21,10 +21,10 @@ const PORT = process.env.PORT || 8090
 app.use(cors())
 app.use(express.json({ limit: '50mb' })) // Increase JSON payload limit to 50MB
 
-// Load git configuration
+// Load git configuration 
 let gitConfig = {
   repository: { 
-    url: process.env.GIT_REPOSITORY_URL || 'git@github.com:nammayatri/configDashboard.git', 
+    url: process.env.GIT_REPOSITORY_URL || 'git@github.com:nammayatri-ai/configDashboard.git', 
     branch: 'main', 
     remote: 'origin' 
   },
@@ -591,8 +591,8 @@ app.post('/api/files/upload-to-git', async (req, res) => {
       console.log('✅ Git push successful')
       
       // Generate GitHub URL
-      const githubUrl = `https://github.com/nammayatri/configDashboard/blob/${gitConfig.repository.branch}/configs/${filename}.json`
-      const rawUrl = `https://github.com/nammayatri/configDashboard/raw/${gitConfig.repository.branch}/configs/${filename}.json`
+      const githubUrl = `https://github.com/nammayatri-ai/configDashboard/blob/${gitConfig.repository.branch}/configs/${filename}.json`
+      const rawUrl = `https://github.com/nammayatri-ai/configDashboard/raw/${gitConfig.repository.branch}/configs/${filename}.json`
       
       res.json({
         success: true,

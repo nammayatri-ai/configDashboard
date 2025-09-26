@@ -34,7 +34,7 @@ if [ ! -d ".git" ]; then
     git commit -m "Initial commit: Config Dashboard setup"
     
     echo "🔗 Setting up remote repository..."
-    git remote add origin git@github.com:nammayatri/configDashboard.git
+    git remote add origin git@github.com:nammayatri-ai/configDashboard.git
     git branch -M main
     
     echo "⚠️  Please push to your repository:"
@@ -45,7 +45,7 @@ else
     # Check if remote is set up
     if ! git remote get-url origin >/dev/null 2>&1; then
         echo "🔗 Adding remote repository..."
-        git remote add origin git@github.com:nammayatri/configDashboard.git
+        git remote add origin git@github.com:nammayatri-ai/configDashboard.git
     else
         echo "✅ Remote repository already configured"
     fi
