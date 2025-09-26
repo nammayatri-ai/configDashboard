@@ -32,23 +32,26 @@ npm install --save-dev nodemon
 echo "📁 Creating configs directory..."
 mkdir -p configs
 
-# Initialize git repository if it doesn't exist
-if [ ! -d ".git" ]; then
-    echo "🔧 Initializing git repository..."
+# Initialize git repository in parent directory if it doesn't exist
+if [ ! -d "../.git" ]; then
+    echo "🔧 Initializing git repository in parent directory..."
+    cd ..
     git init
     git add .
     git commit -m "Initial commit: Config Dashboard setup"
     
     echo "🔗 Setting up remote repository..."
-    git remote add origin git@github.com:nammayatri-ai/configDashboard.git
+    git remote add origin https://github.com/nammayatri-ai/configDashboard.git
     git branch -M main
     
     echo "⚠️  Please push to your repository:"
     echo "   git push -u origin main"
+    cd backend
 else
-    echo "✅ Git repository already exists"
+    echo "✅ Git repository already exists in parent directory"
     
-    # Check if remote is set up
+    # Check if remote is set up (from parent directory)
+    cd ..
     if ! git remote get-url origin >/dev/null 2>&1; then
         echo "🔗 Adding remote repository..."
         git remote add origin https://github.com/nammayatri-ai/configDashboard.git
@@ -77,6 +80,7 @@ else
         echo "Please set GIT_TOKEN environment variable with your GitHub token"
         exit 1
     fi
+    cd backend
 fi
 
 # Create .gitignore if it doesn't exist
