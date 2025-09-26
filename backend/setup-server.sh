@@ -2,10 +2,12 @@
 
 echo "🚀 Setting up Config Dashboard Server..."
 
-# Load environment variables from .env file if it exists (in parent directory)
-if [ -f "../.env" ]; then
+# Load environment variables from .env file if it exists
+if [ -f ".env" ]; then
     echo "📄 Loading environment variables from .env file..."
-    export $(grep -v '^#' ../.env | xargs)
+    set -a  # automatically export all variables
+    source .env
+    set +a  # stop automatically exporting
 fi
 
 # Check if Node.js is installed

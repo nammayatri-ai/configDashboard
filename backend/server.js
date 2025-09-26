@@ -11,7 +11,7 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
 // Load environment variables from .env.server file
-dotenv.config({ path: path.join(__dirname, '..', '.env') })
+dotenv.config({ path: path.join(__dirname, '.env') })
 
 const execAsync = promisify(exec)
 const app = express()
@@ -717,7 +717,7 @@ app.post('/api/config/save', async (req, res) => {
 
 // Health check
 app.get('/api/health', (req, res) => {
-  res.json({ status: 'OK', timestamp: new Date().toISOString() })
+  res.json({ status: 'OK NICE', timestamp: new Date().toISOString() , testVar : process.env.GIT_USER_EMAIL })
 })
 
 // Git authentication status
