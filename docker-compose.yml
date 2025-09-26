@@ -1,0 +1,41 @@
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    env_file:
+      - .env
+    environment:
+      - VITE_API_BASE_URL=http://localhost:8090/api
+      - VITE_APP_ENVIRONMENT=development
+    depends_on:
+      - backend
+    networks:
+      - config-dashboard-network
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8090:8090"
+    volumes:
+      - ./backend:/app
+      - ./backend/configs:/app/configs
+      - ~/.ssh:/root/.ssh:ro
+    env_file:
+      - .env.server
+    environment:
+      - PORT=8090
+      - NODE_ENV=production
+    networks:
+      - config-dashboard-network
+
+networks:
+  config-dashboard-network:
+    driver: bridge

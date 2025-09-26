@@ -1,0 +1,193 @@
+{
+  "default": {
+    "version": "1.0.0",
+    "enableLocationUnserviceable": true,
+    "preSelectedSmartTip": false,
+    "enableGreeting": true,
+    "slowNetworkToastThreshHold": 4000,
+    "pickupThresholdForReallocation": 40,
+    "boostedSearchModalOpenTime": 15000,
+    "lookingForRidesTipEnabled": true,
+    "enablePetRide": true,
+    "appUpdateMethod": "force_update",
+    "exponentialRetryStartCount": 4,
+    "enableWhatsappOTPLogin": true,
+    "enableAddStop": true,
+    "enableKaptureHelpSupport": false,
+    "enableMultimodal": false,
+    "enableHyperUPI": false,
+    "enableDriverFavourite": true,
+    "showSeparateNammaTransit": false,
+    "enablePickupInstructions": false,
+    "enablePickupInstructionsNewPill": false,
+    "pickupInstructionsMaxEditCount": 2,
+    "pickupInstructionsCharLimit": 60,
+    "audioRecordingTimeLimit": 15,
+    "estimateCardsPositionConfig": {
+      "nammaTransitPosition": 1,
+      "bookAnyPosition": 2
+    },
+    "multimodalTicketConfig": {
+      "dynamicRefresh": false,
+      "refreshTime": 30000
+    },
+    "transitOptions": {
+      "showMoreRoutes": false,
+      "showPublicTransitPreferences": false
+    }
+  },
+  "bangalore": {
+    "version": "1.0.0",
+    "enableLocationUnserviceable": true,
+    "preSelectedSmartTip": false,
+    "enableGreeting": true,
+    "slowNetworkToastThreshHold": 4000,
+    "pickupThresholdForReallocation": 40,
+    "lookingForRidesTipEnabled": true,
+    "shouldShowDefaultTips": false,
+    "boostedSearchModalOpenTime": 15000,
+    "enablePetRide": true,
+    "appUpdateMethod": "force_update",
+    "exponentialRetryStartCount": 4,
+    "enableWhatsappOTPLogin": true,
+    "enableAddStop": true,
+    "enableKaptureHelpSupport": true,
+    "enableMultimodal": true,
+    "enableHyperUPI": true,
+    "showPublicTransportAboveEstimates": false,
+    "enableDriverFavourite": true,
+    "showSeparateNammaTransit": false,
+    "enablePickupInstructions": false,
+    "enablePickupInstructionsNewPill": false,
+    "pickupInstructionsMaxEditCount": 2,
+    "pickupInstructionsCharLimit": 60,
+    "audioRecordingTimeLimit": 15,
+    "estimateCardsPositionConfig": {
+      "nammaTransitPosition": 2,
+      "bookAnyPosition": 3
+    },
+    "multimodalTicketConfig": {
+      "dynamicRefresh": true,
+      "refreshTime": 30000
+    },
+    "transitOptions": {
+      "showMoreRoutes": true,
+      "showPublicTransitPreferences": false
+    }
+  },
+  "amsterdam": {
+    "enableLocationUnserviceable": true,
+    "preSelectedSmartTip": false,
+    "enableGreeting": false,
+    "slowNetworkToastThreshHold": 4000,
+    "pickupThresholdForReallocation": 40,
+    "lookingForRidesTipEnabled": true,
+    "boostedSearchModalOpenTime": 15000,
+    "enablePetRide": true,
+    "appUpdateMethod": "force_update",
+    "exponentialRetryStartCount": 4,
+    "enableWhatsappOTPLogin": true,
+    "enableAddStop": true,
+    "enableMultimodal": true,
+    "enableHyperUPI": false,
+    "enableDriverFavourite": true,
+    "multimodalTicketConfig": {
+      "dynamicRefresh": false,
+      "refreshTime": 30000
+    },
+    "transitOptions": {
+      "showMoreRoutes": false,
+      "showPublicTransitPreferences": false
+    }
+  },
+  "chennai": {
+    "version": "1.0.0",
+    "enableLocationUnserviceable": false,
+    "preSelectedSmartTip": false,
+    "enableGreeting": true,
+    "slowNetworkToastThreshHold": 4000,
+    "appUpdateMethod": "ignore_update",
+    "estimatesTipEnabled": false,
+    "lookingForRidesTipEnabled": true,
+    "pickupThresholdForReallocation": 50,
+    "shouldShowDefaultTips": false,
+    "feedbackPendingExpiryTimeInMs": 172800000,
+    "editTipOrVehicleButtonDisableThreshold": 15000,
+    "boostedSearchModalOpenTime": 15000,
+    "enableTrueCaller": true,
+    "enablePetRide": false,
+    "enableWhatsappOTPLogin": true,
+    "enableDriverFavourite": false,
+    "enableMultimodal": true,
+    "enableHyperUPI": false,
+    "showPublicTransportAboveEstimates": false,
+    "estimateCardsPositionConfig": {
+      "nammaTransitPosition": 1,
+      "bookAnyPosition": 2
+    },
+    "multimodalTicketConfig": {
+      "dynamicRefresh": false,
+      "refreshTime": 30000
+    },
+    "transitOptions": {
+      "showMoreRoutes": false,
+      "showPublicTransitPreferences": false
+    }
+  },
+  "delhi": {
+    "enableLocationUnserviceable": true,
+    "preSelectedSmartTip": true,
+    "enableGreeting": true,
+    "slowNetworkToastThreshHold": 4000,
+    "pickupThresholdForReallocation": 40,
+    "lookingForRidesTipEnabled": true,
+    "boostedSearchModalOpenTime": 15000,
+    "enablePetRide": true,
+    "appUpdateMethod": "force_update",
+    "exponentialRetryStartCount": 4,
+    "enableWhatsappOTPLogin": true,
+    "enableAddStop": true,
+    "enableMultimodal": true,
+    "enableHyperUPI": false,
+    "showPublicTransportAboveEstimates": false,
+    "enableDriverFavourite": true,
+    "showSeparateNammaTransit": false,
+    "estimateCardsPositionConfig": {
+      "nammaTransitPosition": 1,
+      "bookAnyPosition": 2
+    },
+    "multimodalTicketConfig": {
+      "dynamicRefresh": false,
+      "refreshTime": 30000
+    }
+  },
+  "kochi": {
+    "enableLocationUnserviceable": true,
+    "preSelectedSmartTip": false,
+    "enableGreeting": false,
+    "slowNetworkToastThreshHold": 4000,
+    "enablePetRide": false,
+    "appUpdateMethod": "force_update",
+    "lookingForRidesTipEnabled": true,
+    "shouldShowDefaultTips": true,
+    "showPublicTransportAboveEstimates": true,
+    "estimateCardsPositionConfig": {
+      "nammaTransitPosition": 1,
+      "bookAnyPosition": 2
+    },
+    "multimodalTicketConfig": {
+      "dynamicRefresh": false,
+      "refreshTime": 30000
+    },
+    "enableMultimodal": false,
+    "enableHyperUPI": false
+  },
+  "bhubaneswar": {
+    "shouldShowDefaultTips": true,
+    "lookingForRidesTipEnabled": true
+  },
+  "kolkata": {
+    "shouldShowDefaultTips": true,
+    "lookingForRidesTipEnabled": true
+  }
+}
