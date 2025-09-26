@@ -1,0 +1,25 @@
+{
+  "repository": {
+    "url": "git@github.com:nammayatri/configDashboard.git",
+    "branch": "main",
+    "remote": "origin"
+  },
+  "git": {
+    "user": {
+      "name": "Config Dashboard",
+      "email": "dhruv.singh@nammayatri.in"
+    },
+    "token": "",
+    "commit": {
+      "prefix": "[Config Dashboard]",
+      "template": "{prefix} {action} {filename}.json"
+    }
+  },
+  "settings": {
+    "autoCommit": true,
+    "autoPush": true,
+    "validateJson": true,
+    "createBackup": false,
+    "maxFileSize": "10MB"
+  }
+}

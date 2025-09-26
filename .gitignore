@@ -1,9 +1,4 @@
 # Backend code - don't track in Git
-server.js
-package.json
 package-lock.json
 node_modules/
-Dockerfile
 .dockerignore
-setup-server.sh
-config/
