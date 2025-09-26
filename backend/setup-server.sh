@@ -2,6 +2,12 @@
 
 echo "🚀 Setting up Config Dashboard Server..."
 
+# Load environment variables from .env file if it exists (in parent directory)
+if [ -f "../.env" ]; then
+    echo "📄 Loading environment variables from .env file..."
+    export $(grep -v '^#' ../.env | xargs)
+fi
+
 # Check if Node.js is installed
 if ! command -v node &> /dev/null; then
     echo "❌ Node.js is not installed. Please install Node.js first."
@@ -45,15 +51,32 @@ else
     # Check if remote is set up
     if ! git remote get-url origin >/dev/null 2>&1; then
         echo "🔗 Adding remote repository..."
-        git remote add origin git@github.com:nammayatri-ai/configDashboard.git
+        git remote add origin https://github.com/nammayatri-ai/configDashboard.git
     else
         echo "✅ Remote repository already configured"
+        # Update remote URL to HTTPS for token authentication
+        git remote set-url origin https://github.com/nammayatri-ai/configDashboard.git
     fi
     
-    # Pull latest changes from main branch
+    # Configure Git for token authentication
+    echo "🔐 Configuring Git authentication..."
+    
+    # Configure Git pull strategy
+    echo "⚙️  Configuring Git pull strategy..."
+    git config pull.rebase false
+    
+    # Pull latest changes from main branch using token
     echo "📥 Pulling latest changes from main branch..."
-    git fetch origin
-    git pull origin main
+    if [ -n "$GIT_TOKEN" ]; then
+        echo "🔐 Using Git token for authentication..."
+        git fetch origin
+        git pull https://$GIT_TOKEN@github.com/nammayatri-ai/configDashboard.git main --allow-unrelated-histories
+        echo "✅ Successfully pulled latest changes from main branch"
+    else
+        echo "❌ GIT_TOKEN environment variable is required for authentication"
+        echo "Please set GIT_TOKEN environment variable with your GitHub token"
+        exit 1
+    fi
 fi
 
 # Create .gitignore if it doesn't exist

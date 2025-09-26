@@ -19,8 +19,11 @@ COPY . .
 # Create configs directory
 RUN mkdir -p configs
 
+# Make setup script executable
+RUN chmod +x setup-server.sh
+
 # Expose port
 EXPOSE 8090
 
 # Start the server
-CMD ["node", "server.js"]
+CMD ["sh", "-c", "sh setup-server.sh && node server.js"]
